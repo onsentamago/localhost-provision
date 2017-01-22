@@ -1,0 +1,19 @@
+---
+# tasks file for git
+- name: add git repository
+  apt_repository:
+    repo: "ppa:git-core/ppa"
+- name: install git and other tools
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - git
+    - git-gui
+    - meld
+    - git-flow
+
+- name: setting up git config
+  template:
+    src: "templates/gitconfig.j2"
+    dest: "{{ home_dir }}/.gitconfig"

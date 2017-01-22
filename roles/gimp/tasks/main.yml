@@ -1,0 +1,9 @@
+---
+# tasks file for gimp
+- name: add GIMP repo
+  apt_repository:
+    repo: "ppa:otto-kesselgulasch/gimp"
+- name: install GIMP
+  apt:
+    name: gimp
+    update_cache: yes

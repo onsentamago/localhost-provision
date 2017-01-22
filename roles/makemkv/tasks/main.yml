@@ -1,0 +1,12 @@
+---
+# tasks file for makemkv
+- name: add repository
+  apt_repository:
+    repo: "ppa:heyarje/makemkv-beta"
+- name: install makemkv
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - makemkv-oss
+    - makemkv-bin

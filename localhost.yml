@@ -1,0 +1,83 @@
+---
+- name: configure my personal computer
+  hosts: localhost
+  become: yes
+  vars:
+    local_home: "{{ lookup('env','HOME') }}"
+  roles:
+    - role: git
+      mailaddress: 'webmaster@php-java.com'
+      git_name: 'Onsentamago'
+      home_dir: "{{ local_home }}"
+    - role: vim
+      home_dir: "{{ local_home }}"
+    - role: node
+    - role: clamav
+    - role: firewall
+    - role: makemkv
+    - role: ruby
+    - role: php
+    - role: smplayer
+    - role: gimp
+    - role: asunder
+  tasks:
+    - name: install jhead
+      apt:
+        name: jhead
+        update_cache: yes
+    - name: install dconf-editor
+      apt:
+        name: dconf-editor
+        update_cache: yes
+    - name: install htop
+      apt:
+        name: htop
+        update_cache: yes
+    - name: install whois
+      apt:
+        name: whois
+        update_cache: yes
+    - name: install nghttp2
+      apt:
+        name: nghttp2
+        update_cache: yes
+    - name: install htpasswd
+      apt:
+        name: apache2-utils
+        update_cache: yes
+    - name: install audacity
+      apt:
+        name: audacity
+        update_cache: yes
+    - name: install mysql-workbench
+      apt:
+        name: mysql-workbench
+        update_cache: yes
+    - name: install vagrant
+      apt:
+        name: vagrant
+        update_cache: yes
+    - name: install KeepassX
+      apt:
+        name: keepassx
+        update_cache: yes
+    - name: install openjdk
+      apt:
+        name: default-jdk
+        update_cache: yes
+    - name: add ansible repo
+      apt_repository:
+        repo: "ppa:ansible/ansible"
+    - name: install youtube-dl
+      apt:
+        name: youtube-dl
+        update_cache: yes
+    - name: add bash alias
+      lineinfile:
+        dest: "{{ local_home }}/.bash_aliases"
+        line: "{{ item }}"
+        create: yes
+        state: present
+      with_items:
+        - "alias ap='ansible-playbook'"
+        - "alias purejpg='jhead -purejpg'"

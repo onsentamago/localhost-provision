@@ -1,0 +1,11 @@
+---
+# tasks file for php
+- name: install php and related tools
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - php7.0-cli
+    - php7.0-curl
+    - php7.0-xml
+    - php-pear

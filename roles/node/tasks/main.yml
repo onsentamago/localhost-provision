@@ -1,0 +1,13 @@
+---
+# tasks file for node
+- name: install nodejs
+  apt:
+    name: nodejs
+- name: able to execute command with 'node'
+  file:
+    src: /usr/bin/nodejs
+    dest: /usr/bin/node
+    state: link
+- name: install npm
+  apt:
+    name: npm

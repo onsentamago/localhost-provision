@@ -1,0 +1,13 @@
+---
+# tasks file for firewwall
+- name: install ufw
+  apt:
+    name: ufw
+    update_cache: yes
+- name: install gufw
+  apt:
+    name: gufw
+    update_cache: yes
+- name: set up ufw
+  ufw:
+    state: enabled
