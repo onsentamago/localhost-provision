@@ -1,0 +1,27 @@
+---
+# tasks file for clamav
+- name: install clamav
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - clamav-base
+    - clamav-daemon
+    - clamav-freshclam
+
+- name: update clamav definition
+  shell: "{{ item }}"
+  with_items:
+    - /etc/init.d/clamav-freshclam start
+    - touch clamav.define.start
+  args:
+    creates: clamav.define.start
+
+- name: run clamav automatically
+  shell: "{{ item }}"
+  with_items:
+    - /etc/init.d/clamav-daemon start
+    - touch clamav.deamon.start
+  args:
+    creates: clamav.deamon.start
+

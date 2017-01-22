@@ -1,0 +1,15 @@
+---
+# tasks file for ruby
+- name: install ruby and rubygems
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - ruby
+    - rubygems
+
+- name: install capistrano
+  gem:
+    name: capistrano
+    state: latest
+

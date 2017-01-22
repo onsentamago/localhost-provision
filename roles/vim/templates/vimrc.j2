@@ -1,0 +1,20 @@
+set laststatus=2
+set number
+
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+
+set foldcolumn=3
+
+"ファイル名表示
+set statusline=%<%F
+
+"ファイルフォーマット表示
+set statusline+=[%{&fileformat}]
+
+"文字コード表示
+set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
+
+set statusline+=%P
