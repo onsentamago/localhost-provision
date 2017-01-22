@@ -20,6 +20,7 @@
     - role: smplayer
     - role: gimp
     - role: asunder
+    - role: python
   tasks:
     - name: install jhead
       apt:
@@ -69,6 +70,10 @@
       apt_repository:
         repo: "ppa:ansible/ansible"
     - name: install youtube-dl
+      apt:
+        name: youtube-dl
+        update_cache: yes
+    - name: install speedtest-cli
       apt:
         name: youtube-dl
         update_cache: yes
