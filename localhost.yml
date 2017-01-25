@@ -75,7 +75,7 @@
         update_cache: yes
     - name: install speedtest-cli
       apt:
-        name: youtube-dl
+        name: speedtest-cli
         update_cache: yes
     - name: add bash alias
       lineinfile:
