@@ -70,6 +70,10 @@
       apt:
         name: speedtest-cli
         update_cache: yes
+    - name: install clementine
+      apt:
+        name: clementine
+        update_cache: yes
     - name: add bash alias
       lineinfile:
         dest: "{{ local_home }}/.bash_aliases"
