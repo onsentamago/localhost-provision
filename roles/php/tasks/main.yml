@@ -9,3 +9,4 @@
     - php7.0-curl
     - php7.0-xml
     - php-pear
+    - php-zip

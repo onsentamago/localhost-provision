@@ -54,10 +54,6 @@
       apt:
         name: mysql-workbench
         update_cache: yes
-    - name: install vagrant
-      apt:
-        name: vagrant
-        update_cache: yes
     - name: install KeepassX
       apt:
         name: keepassx
@@ -66,16 +62,17 @@
       apt:
         name: default-jdk
         update_cache: yes
-    - name: add ansible repo
-      apt_repository:
-        repo: "ppa:ansible/ansible"
     - name: install youtube-dl
       apt:
         name: youtube-dl
         update_cache: yes
     - name: install speedtest-cli
       apt:
-        name: youtube-dl
+        name: speedtest-cli
+        update_cache: yes
+    - name: install clementine
+      apt:
+        name: clementine
         update_cache: yes
     - name: add bash alias
       lineinfile:

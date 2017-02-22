@@ -17,3 +17,8 @@
   template:
     src: "templates/gitconfig.j2"
     dest: "{{ home_dir }}/.gitconfig"
+
+- name: setting up gitignore_global
+  template:
+    src: "templates/gitignore_global.j2"
+    dest: "{{ home_dir }}/.gitignore_global"
