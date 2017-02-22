@@ -21,6 +21,7 @@
     - role: gimp
     - role: asunder
     - role: python
+    - role: peek
   tasks:
     - name: install jhead
       apt:
