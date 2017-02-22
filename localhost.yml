@@ -62,9 +62,6 @@
       apt:
         name: default-jdk
         update_cache: yes
-    - name: add ansible repo
-      apt_repository:
-        repo: "ppa:ansible/ansible"
     - name: install youtube-dl
       apt:
         name: youtube-dl
