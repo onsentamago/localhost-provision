@@ -54,10 +54,6 @@
       apt:
         name: mysql-workbench
         update_cache: yes
-    - name: install vagrant
-      apt:
-        name: vagrant
-        update_cache: yes
     - name: install KeepassX
       apt:
         name: keepassx
