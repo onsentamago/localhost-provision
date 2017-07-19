@@ -22,6 +22,7 @@
     - role: asunder
     - role: python
     - role: peek
+    - role: build-tools
   tasks:
     - name: install jhead
       apt:
