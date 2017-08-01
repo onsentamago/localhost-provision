@@ -11,3 +11,8 @@
 - name: install npm
   apt:
     name: npm
+- name: Install gulp
+  npm:
+    name: gulp
+    global: yes
+
