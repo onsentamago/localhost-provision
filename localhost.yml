@@ -23,6 +23,7 @@
     - role: python
     - role: peek
     - role: build-tools
+    - role: coreos
   tasks:
     - name: install jhead
       apt:
