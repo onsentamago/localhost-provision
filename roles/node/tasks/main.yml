@@ -20,3 +20,7 @@
   npm:
     name: angular/cli
     global: yes
+- name: Install TSLint
+  npm:
+    name: tslint
+    global: yes
