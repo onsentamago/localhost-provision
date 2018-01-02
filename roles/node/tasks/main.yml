@@ -28,3 +28,7 @@
   npm:
     name: live-server
     global: yes
+- name: Install gitbook
+  npm:
+    name: gitbook
+    global: yes

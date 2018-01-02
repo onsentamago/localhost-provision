@@ -25,6 +25,7 @@
     - role: build-tools
     - role: coreos
     - role: k8n
+    - role: devede
   tasks:
     - name: install jhead
       apt:
