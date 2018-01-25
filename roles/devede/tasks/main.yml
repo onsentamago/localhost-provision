@@ -1,0 +1,6 @@
+---
+# tasks file for devede
+- name: install devede
+  apt:
+    name: devede
+    update_cache: yes

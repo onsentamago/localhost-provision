@@ -3,11 +3,32 @@
 - name: install nodejs
   apt:
     name: nodejs
-- name: able to execute command with 'node'
+- name: able to execute command,'node'
   file:
     src: /usr/bin/nodejs
     dest: /usr/bin/node
     state: link
-- name: install npm
-  apt:
-    name: npm
+- name: Install gulp
+  npm:
+    name: gulp
+    global: yes
+- name: Install webpack
+  npm:
+    name: webpack
+    global: yes
+- name: Install angular-cli
+  npm:
+    name: angular/cli
+    global: yes
+- name: Install TSLint
+  npm:
+    name: tslint
+    global: yes
+- name: Install live-server
+  npm:
+    name: live-server
+    global: yes
+- name: Install gitbook
+  npm:
+    name: gitbook
+    global: yes

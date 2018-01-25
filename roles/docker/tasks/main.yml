@@ -1,0 +1,10 @@
+---
+# tasks file for docker
+- name: add docker repo
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable
+    state: present
+- name: install docker
+  apt:
+    name: docker-ce
+    update_cache: yes

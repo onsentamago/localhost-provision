@@ -10,3 +10,5 @@
     - php7.0-xml
     - php-pear
     - php-zip
+    - php7.0-mysql
+    - composer

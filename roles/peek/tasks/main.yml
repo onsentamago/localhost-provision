@@ -1,0 +1,9 @@
+---
+# tasks file for git
+- name: add repository
+  apt_repository:
+    repo: "ppa:peek-developers/stable"
+- name: install peek
+  apt:
+    name: peek
+    update_cache: yes

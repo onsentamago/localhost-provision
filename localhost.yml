@@ -21,6 +21,13 @@
     - role: gimp
     - role: asunder
     - role: python
+    - role: peek
+    - role: build-tools
+    - role: coreos
+    - role: k8n
+    - role: devede
+    - role: docker
+      tags: docker
   tasks:
     - name: install jhead
       apt:
