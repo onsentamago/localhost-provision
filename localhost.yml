@@ -26,6 +26,8 @@
     - role: coreos
     - role: k8n
     - role: devede
+    - role: docker
+      tags: docker
   tasks:
     - name: install jhead
       apt:
