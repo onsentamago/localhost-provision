@@ -12,6 +12,7 @@
     - role: vim
       home_dir: "{{ local_home }}"
     - role: node
+      tags: node
     - role: clamav
     - role: firewall
     - role: makemkv

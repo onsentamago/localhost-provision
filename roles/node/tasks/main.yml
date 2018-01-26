@@ -1,8 +1,12 @@
 ---
 # tasks file for node
-- name: install nodejs
+- name: install node related app
   apt:
-    name: nodejs
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - nodejs
+    - npm
 - name: able to execute command,'node'
   file:
     src: /usr/bin/nodejs
