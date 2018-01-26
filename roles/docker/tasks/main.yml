@@ -1,5 +1,19 @@
 ---
 # tasks file for docker
+- name: install docker related app
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+- name: add official GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
 - name: add docker repo
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable
