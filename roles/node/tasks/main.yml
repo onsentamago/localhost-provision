@@ -20,10 +20,6 @@
   npm:
     name: webpack
     global: yes
-- name: Install angular-cli
-  npm:
-    name: angular/cli
-    global: yes
 - name: Install TSLint
   npm:
     name: tslint

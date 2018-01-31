@@ -1,6 +1,4 @@
 ---
 # tasks file for k8n
 - name: install kubectl
-  apt:
-    name: kubectl
-    update_cache: yes
+  command: snap install kubectl --classic
