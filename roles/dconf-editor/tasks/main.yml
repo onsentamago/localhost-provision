@@ -1,0 +1,8 @@
+---
+# tasks file for dconf-editor
+- name: install dconf-editor
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - dconf-editor

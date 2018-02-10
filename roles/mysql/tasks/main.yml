@@ -1,0 +1,11 @@
+---
+# tasks file for mysql
+- name: install mysql-workbench
+  apt:
+    name: mysql-workbench
+    update_cache: yes
+
+- name: install JDBC driver
+  apt:
+    name: libmysql-java
+    update_cache: yes

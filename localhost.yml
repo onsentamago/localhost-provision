@@ -27,19 +27,11 @@
     - role: coreos
     - role: k8n
     - role: devede
+    - role: jhead
+    - role: dconf-editor
+    - role: htop
+    - role: mysql
   tasks:
-    - name: install jhead
-      apt:
-        name: jhead
-        update_cache: yes
-    - name: install dconf-editor
-      apt:
-        name: dconf-editor
-        update_cache: yes
-    - name: install htop
-      apt:
-        name: htop
-        update_cache: yes
     - name: install whois
       apt:
         name: whois
@@ -55,10 +47,6 @@
     - name: install audacity
       apt:
         name: audacity
-        update_cache: yes
-    - name: install mysql-workbench
-      apt:
-        name: mysql-workbench
         update_cache: yes
     - name: install KeepassX
       apt:
