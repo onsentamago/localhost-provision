@@ -1,0 +1,8 @@
+---
+# tasks file for whois
+- name: install whois
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - whois

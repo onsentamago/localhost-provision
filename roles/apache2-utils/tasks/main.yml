@@ -1,0 +1,8 @@
+---
+# tasks file for apache2-utils
+- name: apache2-utils
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - apache2-utils

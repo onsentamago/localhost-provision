@@ -31,19 +31,10 @@
     - role: dconf-editor
     - role: htop
     - role: mysql
+    - role: whois
+    - role: nghttp2
+    - role: apache2-utils
   tasks:
-    - name: install whois
-      apt:
-        name: whois
-        update_cache: yes
-    - name: install nghttp2
-      apt:
-        name: nghttp2
-        update_cache: yes
-    - name: install htpasswd
-      apt:
-        name: apache2-utils
-        update_cache: yes
     - name: install audacity
       apt:
         name: audacity
