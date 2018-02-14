@@ -1,6 +1,0 @@
----
-# tasks file for coreos
-- name: install fleet
-  apt:
-    name: fleet
-    update_cache: yes

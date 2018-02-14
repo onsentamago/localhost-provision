@@ -1,5 +1,9 @@
 # localhost-provisioning
 
-Initial setup of my Ubuntu16.04 computer with Ansible.
+Initial setup of Ubuntu16.04 computer using Ansible.
 
-Run command 'ansible-playbook localhost.yml'
+## Usage
+
+`````
+ansible-playbook main.yml
+`````
