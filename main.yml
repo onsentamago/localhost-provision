@@ -4,10 +4,12 @@
   become: yes
   vars:
     local_home: "{{ lookup('env','HOME') }}"
+  vars_files:
+    - conf.yml
   roles:
     - role: git
-      mailaddress: 'webmaster@php-java.com'
-      git_name: 'Onsentamago'
+      mailaddress: "{{ mail_address }}"
+      git_name: "{{ git_name }}"
       home_dir: "{{ local_home }}"
     - role: vim
       home_dir: "{{ local_home }}"
