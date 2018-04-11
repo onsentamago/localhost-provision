@@ -32,7 +32,6 @@
     - role: htop
     - role: mysql
     - role: whois
-    - role: nghttp2
     - role: apache2-utils
   tasks:
     - name: install audacity
