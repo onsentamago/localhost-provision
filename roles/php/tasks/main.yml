@@ -1,14 +1,18 @@
 ---
 # tasks file for php
+- name: add apt repo
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+
 - name: install php and related tools
   apt:
     name: "{{ item }}"
     update_cache: yes
   with_items:
-    - php7.0-cli
-    - php7.0-curl
-    - php7.0-xml
+    - php7.2-cli
+    - php7.2-curl
+    - php7.2-xml
     - php-pear
-    - php-zip
-    - php7.0-mysql
+    - php7.2-zip
+    - php7.2-mysql
     - composer

@@ -5,30 +5,8 @@
     name: "{{ item }}"
     update_cache: yes
   with_items:
-    - nodejs
     - npm
-- name: able to execute command,'node'
-  file:
-    src: /usr/bin/nodejs
-    dest: /usr/bin/node
-    state: link
-- name: Install gulp
+- name: Install n
   npm:
-    name: gulp
-    global: yes
-- name: Install webpack
-  npm:
-    name: webpack
-    global: yes
-- name: Install TSLint
-  npm:
-    name: tslint
-    global: yes
-- name: Install live-server
-  npm:
-    name: live-server
-    global: yes
-- name: Install gitbook
-  npm:
-    name: gitbook
+    name: n
     global: yes
