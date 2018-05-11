@@ -1,0 +1,12 @@
+---
+# tasks file for bash
+- name: add bash alias
+  lineinfile:
+    dest: "{{ local_home }}/.bash_aliases"
+    line: "{{ item }}"
+    create: yes
+    state: present
+  with_items:
+    - "alias ap='ansible-playbook'"
+    - "alias purejpg='jhead -purejpg'"
+    - "alias globalip='curl httpbin.org/ip'"

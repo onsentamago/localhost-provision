@@ -1,0 +1,6 @@
+---
+# tasks file for clementine
+- name: install clementine
+  apt:
+    name: clementine
+    update_cache: yes

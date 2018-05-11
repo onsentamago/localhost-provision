@@ -1,0 +1,6 @@
+---
+# tasks file for openjdk
+- name: install openjdk
+  apt:
+    name: default-jdk
+    update_cache: yes

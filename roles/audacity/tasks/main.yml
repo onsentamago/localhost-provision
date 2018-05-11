@@ -1,0 +1,6 @@
+---
+# tasks file for audacity
+- name: install audacity
+  apt:
+    name: audacity
+    update_cache: yes
