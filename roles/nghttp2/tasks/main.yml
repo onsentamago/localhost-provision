@@ -1,8 +1,0 @@
----
-# tasks file for nghttp2
-- name: install nghttp2
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - nghttp2

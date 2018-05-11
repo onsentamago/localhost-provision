@@ -14,7 +14,6 @@
     - role: vim
       home_dir: "{{ local_home }}"
     - role: node
-      tags: node
     - role: clamav
     - role: firewall
     - role: makemkv
@@ -33,40 +32,11 @@
     - role: htop
     - role: mysql
     - role: whois
-    - role: nghttp2
     - role: apache2-utils
-  tasks:
-    - name: install audacity
-      apt:
-        name: audacity
-        update_cache: yes
-    - name: install KeepassX
-      apt:
-        name: keepassx
-        update_cache: yes
-    - name: install openjdk
-      apt:
-        name: default-jdk
-        update_cache: yes
-    - name: install youtube-dl
-      apt:
-        name: youtube-dl
-        update_cache: yes
-    - name: install speedtest-cli
-      apt:
-        name: speedtest-cli
-        update_cache: yes
-    - name: install clementine
-      apt:
-        name: clementine
-        update_cache: yes
-    - name: add bash alias
-      lineinfile:
-        dest: "{{ local_home }}/.bash_aliases"
-        line: "{{ item }}"
-        create: yes
-        state: present
-      with_items:
-        - "alias ap='ansible-playbook'"
-        - "alias purejpg='jhead -purejpg'"
-        - "alias globalip='curl httpbin.org/ip'"
+    - role: audacity
+    - role: keepassx
+    - role: openjdk
+    - role: speedtest-cli
+    - role: clementine
+    - role: bash
+

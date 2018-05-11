@@ -11,3 +11,18 @@
 - name: set up ufw
   ufw:
     state: enabled
+- name: Allow all access to tcp port 4200(ng serve)
+  ufw:
+    rule: allow
+    port: 4200
+    proto: tcp
+- name: Allow all access to dropbox
+  ufw:
+    rule: allow
+    port: 17500
+    proto: tcp
+- name: Allow all access to dropbox
+  ufw:
+    rule: allow
+    port: 17500
+    proto: udp

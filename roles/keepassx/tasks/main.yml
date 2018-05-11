@@ -1,0 +1,6 @@
+---
+# tasks file for keepassx
+- name: install KeepassX
+  apt:
+    name: keepassx
+    update_cache: yes
