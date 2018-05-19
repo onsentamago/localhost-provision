@@ -25,7 +25,7 @@
     - role: python
     - role: peek
     - role: build-tools
-    - role: k8n
+    - role: k8s
     - role: devede
     - role: jhead
     - role: dconf-editor
