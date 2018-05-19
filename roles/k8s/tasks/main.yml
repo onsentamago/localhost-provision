@@ -1,4 +1,4 @@
 ---
-# tasks file for k8n
+# tasks file for k8s
 - name: install kubectl
   command: snap install kubectl --classic
