@@ -14,29 +14,28 @@
     - role: vim
       home_dir: "{{ local_home }}"
     - role: node
-    - role: clamav
+    - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: firewall
     - role: makemkv
-    - role: ruby
     - role: php
     - role: smplayer
     - role: gimp
     - role: asunder
     - role: python
-    - role: peek
+    - role: peek # Simple animated GIF screen recorder
     - role: build-tools
     - role: k8s
-    - role: devede
-    - role: jhead
-    - role: dconf-editor
+    - role: devede # free, open-source Video to DVD converter
+    - role: jhead # Digicam JPEG Exif header manipulation tool
+    - role: dconf-editor # ubuntu setting tool
     - role: htop
     - role: mysql
     - role: whois
     - role: apache2-utils
-    - role: audacity
+    - role: audacity # cross-platform audio software
     - role: keepassx
     - role: openjdk
     - role: speedtest-cli
-    - role: clementine
+    - role: clementine # modern music player and library organizer
     - role: bash
 
