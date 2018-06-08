@@ -6,7 +6,21 @@
     update_cache: yes
   with_items:
     - npm
+
 - name: Install n
   npm:
     name: n
+    global: yes
+
+- name: Install latest node
+  command: n latest
+
+- name: typescript
+  npm:
+    name: typescript
+    global: yes
+
+- name: ts-node #Execute TypeScript files with node
+  npm:
+    name: ts-node
     global: yes
