@@ -1,8 +1,5 @@
 ---
 # tasks file for asunder
-- name: add asunder repo
-  apt_repository:
-    repo: "ppa:webupd8team/unstable"
 - name: install asunder
   apt:
     name: asunder
