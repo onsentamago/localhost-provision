@@ -1,0 +1,6 @@
+---
+# tasks file for inkscape
+- name: install jd 2ch browser
+  apt:
+    name: jd
+    update_cache: yes
