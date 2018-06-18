@@ -38,4 +38,5 @@
     - role: speedtest-cli
     - role: clementine # modern music player and library organizer
     - role: bash
+    - role: jd2ch
 
