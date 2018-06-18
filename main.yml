@@ -39,4 +39,5 @@
     - role: clementine # modern music player and library organizer
     - role: bash
     - role: jd2ch
+    - role: ffmpeg
 
