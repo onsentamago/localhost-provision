@@ -1,13 +1,15 @@
 # localhost-provisioning
 
-Initial setup of Ubuntu18.04 computer using Ansible.
+Initial setup of Ubuntu18.04 desktop with Ansible.
 
-## Installing Prerequisites
+## Installing Ansible
 
 `````
 sudo apt update
 sudo apt dist-upgrade -y
-
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible -y
 `````
 
 ## Usage
