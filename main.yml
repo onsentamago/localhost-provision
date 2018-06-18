@@ -24,7 +24,6 @@
     - role: python
     - role: peek # Simple animated GIF screen recorder
     - role: build-tools
-    - role: k8s
     - role: devede # free, open-source Video to DVD converter
     - role: jhead # Digicam JPEG Exif header manipulation tool
     - role: dconf-editor # ubuntu setting tool

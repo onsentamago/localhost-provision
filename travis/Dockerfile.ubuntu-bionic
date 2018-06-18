@@ -5,9 +5,6 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y software-pro
 RUN apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get install -y \
   ansible \
   curl \
-  snapd
-
-RUN systemctl enable snapd
 
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
