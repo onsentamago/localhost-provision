@@ -5,7 +5,7 @@
   vars:
     local_home: "{{ lookup('env','HOME') }}"
   vars_files:
-    - conf.yml
+    - conf.yml.example
   roles:
     - role: git
       mailaddress: "{{ mail_address }}"
