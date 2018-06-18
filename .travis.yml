@@ -1,0 +1,20 @@
+---
+sudo: required
+
+env:
+  - distribution: ubuntu
+    version: bionic
+
+services:
+  - docker
+
+before_install:
+  - 'sudo docker pull ${distribution}:${version}'
+  - 'sudo docker build --no-cache --rm -f travis/Dockerfile.${distribution}-${version} -t ${distribution}-${version}:ansible travis'
+
+script:
+  - container_id=$(mktemp)
+  - 'sudo docker run -itd --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible ${distribution}-${version}:ansible > "${container_id}"'
+  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/main.yml --syntax-check'
+  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/main.yml'
+  - 'sudo docker rm -f "$(cat ${container_id})"'

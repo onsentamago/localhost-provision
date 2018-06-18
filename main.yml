@@ -5,7 +5,7 @@
   vars:
     local_home: "{{ lookup('env','HOME') }}"
   vars_files:
-    - conf.yml
+    - conf.yml.example
   roles:
     - role: git
       mailaddress: "{{ mail_address }}"
@@ -24,7 +24,6 @@
     - role: python
     - role: peek # Simple animated GIF screen recorder
     - role: build-tools
-    - role: k8s
     - role: devede # free, open-source Video to DVD converter
     - role: jhead # Digicam JPEG Exif header manipulation tool
     - role: dconf-editor # ubuntu setting tool
@@ -38,4 +37,6 @@
     - role: speedtest-cli
     - role: clementine # modern music player and library organizer
     - role: bash
+    - role: jd2ch
+    - role: ffmpeg
 
