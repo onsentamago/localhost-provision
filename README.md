@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/onsentamago/localhost-provision.svg?branch=master)](https://travis-ci.org/onsentamago/localhost-provision)
+
 # localhost-provisioning
 
 Initial setup of Ubuntu18.04 desktop with Ansible.
