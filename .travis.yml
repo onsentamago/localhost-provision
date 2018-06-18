@@ -14,7 +14,7 @@ before_install:
 
 script:
   - container_id=$(mktemp)
-  - 'sudo docker run -itd --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible:ro ${distribution}-${version}:ansible > "${container_id}"'
+  - 'sudo docker run -itd --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible ${distribution}-${version}:ansible > "${container_id}"'
   - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/main.yml --syntax-check'
   - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/main.yml'
   - >

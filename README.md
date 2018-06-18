@@ -1,6 +1,14 @@
 # localhost-provisioning
 
-Initial setup of Ubuntu16.04 computer using Ansible.
+Initial setup of Ubuntu18.04 computer using Ansible.
+
+## Installing Prerequisites
+
+`````
+sudo apt update
+sudo apt dist-upgrade -y
+
+`````
 
 ## Usage
 
