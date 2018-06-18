@@ -6,4 +6,3 @@
     update_cache: yes
   with_items:
     - python-pip
-    - python-gpgme
