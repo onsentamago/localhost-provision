@@ -6,4 +6,3 @@
     update_cache: yes
   with_items:
     - virtualbox
-    - virtualbox-ext-pack
