@@ -21,8 +21,10 @@
     rule: allow
     port: 17500
     proto: tcp
+    src: 0.0.0.0/0
 - name: Allow all access to dropbox
   ufw:
     rule: allow
     port: 17500
     proto: udp
+    src: 0.0.0.0/0
