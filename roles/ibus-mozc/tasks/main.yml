@@ -1,0 +1,6 @@
+---
+# tasks file for ibus-mozc
+- name: install ibus-mozc
+  apt:
+    name: ibus-mozc
+    update_cache: yes
