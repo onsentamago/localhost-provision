@@ -1,0 +1,10 @@
+---
+# tasks file for ukuu
+- name: add apt repo
+  apt_repository:
+    repo: 'ppa:teejee2008/ppa'
+
+- name: install ukuu
+  apt:
+    name: ukuu
+    update_cache: yes
