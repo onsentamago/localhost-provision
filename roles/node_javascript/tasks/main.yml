@@ -24,7 +24,6 @@
   npm:
     name: ts-node
     global: yes
+
 - name: install angular cli
-  npm:
-    name: angular/cli
-    global: yes
+  command: npm install -g @angular/cli
