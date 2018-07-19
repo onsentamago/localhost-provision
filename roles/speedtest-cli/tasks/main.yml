@@ -1,6 +1,0 @@
----
-# tasks file for speedtest-cli
-- name: install speedtest-cli
-  apt:
-    name: speedtest-cli
-    update_cache: yes

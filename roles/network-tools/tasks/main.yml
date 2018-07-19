@@ -1,0 +1,10 @@
+---
+# tasks file for network-tools
+- name: install speedtest-cli
+  apt:
+    name: speedtest-cli
+    update_cache: yes
+- name: install net-tools
+  apt:
+    name: net-tools
+    update_cache: yes

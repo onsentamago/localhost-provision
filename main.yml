@@ -13,7 +13,7 @@
       home_dir: "{{ local_home }}"
     - role: vim
       home_dir: "{{ local_home }}"
-    - role: node
+    - role: node_javascript
     - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: firewall
     - role: makemkv
@@ -34,7 +34,7 @@
     - role: audacity # cross-platform audio software
     - role: keepassx
     - role: openjdk
-    - role: speedtest-cli
+    - role: network-tools
     - role: clementine # modern music player and library organizer
     - role: bash
     - role: jd2ch

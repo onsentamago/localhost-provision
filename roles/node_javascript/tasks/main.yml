@@ -1,5 +1,5 @@
 ---
-# tasks file for node
+# tasks file for node_javascript
 - name: install node related app
   apt:
     name: "{{ item }}"
@@ -20,7 +20,10 @@
     name: typescript
     global: yes
 
-- name: ts-node #Execute TypeScript files with node
+- name: ts-node #Execute TypeScript files with node_javascript
   npm:
     name: ts-node
     global: yes
+
+- name: install angular cli
+  command: npm install -g @angular/cli
