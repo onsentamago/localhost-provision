@@ -34,7 +34,7 @@
     - role: audacity # cross-platform audio software
     - role: keepassx
     - role: openjdk
-    - role: speedtest-cli
+    - role: network-tools
     - role: clementine # modern music player and library organizer
     - role: bash
     - role: jd2ch

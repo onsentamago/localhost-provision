@@ -1,5 +1,4 @@
 ---
-# tasks file for speedtest-cli
 - name: install virtualbox
   apt:
     name: "{{ item }}"
