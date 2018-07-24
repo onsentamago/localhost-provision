@@ -26,7 +26,7 @@
     - role: build-tools
     - role: devede # free, open-source Video to DVD converter
     - role: jhead # Digicam JPEG Exif header manipulation tool
-    - role: dconf-editor # ubuntu setting tool
+    - role: tools # ubuntu setting tools
     - role: htop
     - role: mysql
     - role: whois
