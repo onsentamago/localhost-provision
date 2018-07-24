@@ -1,8 +1,9 @@
 ---
-# tasks file for dconf-editor
+# tasks file for tools
 - name: install dconf-editor
   apt:
     name: "{{ item }}"
     update_cache: yes
   with_items:
     - dconf-editor
+    - gnome-tweaks
