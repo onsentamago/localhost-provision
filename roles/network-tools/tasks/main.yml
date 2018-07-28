@@ -2,9 +2,9 @@
 # tasks file for network-tools
 - name: install speedtest-cli
   apt:
-    name: speedtest-cli
+    name: "{{ item }}"
     update_cache: yes
-- name: install net-tools
-  apt:
-    name: net-tools
-    update_cache: yes
+  with_items:
+    - speedtest-cli
+    - net-tools
+    - whois

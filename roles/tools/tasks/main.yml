@@ -5,5 +5,6 @@
     name: "{{ item }}"
     update_cache: yes
   with_items:
-    - dconf-editor
-    - gnome-tweaks
+  - dconf-editor
+  - gnome-tweaks
+  - htop

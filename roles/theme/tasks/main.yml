@@ -1,0 +1,16 @@
+---
+# tasks file for theme
+- name: add theme repository
+  apt_repository:
+    repo: "{{ item }}"
+  with_items:
+  - ppa:papirus/papirus
+  - ppa:dyatlov-igor/materia-theme
+
+- name: install theme
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+  - papirus-icon-theme
+  - materia-gtk-theme
