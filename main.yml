@@ -37,6 +37,5 @@
     - role: jd2ch
     - role: ffmpeg
     - role: virtualbox
-    - role: ukuu
     - role: ibus-mozc
     - role: theme

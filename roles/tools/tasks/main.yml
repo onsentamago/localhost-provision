@@ -1,8 +1,10 @@
 ---
 # tasks file for tools
-- name: add apt ukuu repo
+- name: add apt repos
   apt_repository:
-    repo: 'ppa:teejee2008/ppa'
+    repo: "{{ item }}"
+  with_items:
+  - 'ppa:teejee2008/ppa' # for ukuu
 
 - name: install tools
   apt:
@@ -13,3 +15,4 @@
   - gnome-tweaks
   - htop
   - ukuu
+  - gnome-shell-pomodoro
