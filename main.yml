@@ -26,11 +26,8 @@
     - role: build-tools
     - role: devede # free, open-source Video to DVD converter
     - role: jhead # Digicam JPEG Exif header manipulation tool
-    - role: tools # ubuntu setting tools
-    - role: htop
+    - role: tools
     - role: mysql
-    - role: whois
-    - role: apache2-utils
     - role: audacity # cross-platform audio software
     - role: keepassx
     - role: openjdk
@@ -40,6 +37,5 @@
     - role: jd2ch
     - role: ffmpeg
     - role: virtualbox
-    - role: ukuu
     - role: ibus-mozc
-
+    - role: theme

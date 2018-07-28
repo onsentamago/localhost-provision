@@ -1,9 +1,18 @@
 ---
 # tasks file for tools
-- name: install dconf-editor
+- name: add apt repos
+  apt_repository:
+    repo: "{{ item }}"
+  with_items:
+  - 'ppa:teejee2008/ppa' # for ukuu
+
+- name: install tools
   apt:
     name: "{{ item }}"
     update_cache: yes
   with_items:
-    - dconf-editor
-    - gnome-tweaks
+  - dconf-editor
+  - gnome-tweaks
+  - htop
+  - ukuu
+  - gnome-shell-pomodoro
