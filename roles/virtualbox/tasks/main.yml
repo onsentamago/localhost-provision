@@ -1,7 +1,0 @@
----
-- name: install virtualbox
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - virtualbox

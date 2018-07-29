@@ -36,6 +36,5 @@
     - role: bash
     - role: jd2ch
     - role: ffmpeg
-    - role: virtualbox
     - role: ibus-mozc
     - role: theme
