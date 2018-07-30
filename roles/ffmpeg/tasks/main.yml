@@ -1,6 +1,0 @@
----
-# tasks file for ffmpeg
-- name: install ffmpeg
-  apt:
-    name: ffmpeg
-    update_cache: yes

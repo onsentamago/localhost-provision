@@ -16,15 +16,13 @@
     - role: node_javascript
     - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: firewall
-    - role: makemkv
     - role: php
-    - role: smplayer
+    - role: video-tools
     - role: gimp
     - role: asunder
     - role: python
     - role: peek # Simple animated GIF screen recorder
     - role: build-tools
-    - role: devede # free, open-source Video to DVD converter
     - role: jhead # Digicam JPEG Exif header manipulation tool
     - role: tools
     - role: mysql
@@ -35,6 +33,5 @@
     - role: clementine # modern music player and library organizer
     - role: bash
     - role: jd2ch
-    - role: ffmpeg
     - role: ibus-mozc
     - role: theme

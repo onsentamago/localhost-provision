@@ -1,0 +1,42 @@
+---
+# tasks file for video-tools
+- name: add smplayer repo
+  apt_repository:
+    repo: "ppa:rvm/smplayer"
+
+- name: install SMPlayer
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - smplayer
+    - smplayer-themes
+    - smplayer-skins
+
+- name: install youtube-dl
+  apt:
+    name: youtube-dl
+    update_cache: yes
+
+- name: install devede
+  apt:
+    name: devede
+    update_cache: yes
+
+- name: install ffmpeg
+  apt:
+    name: ffmpeg
+    update_cache: yes
+
+- name: add makemkv repository
+  apt_repository:
+    repo: "ppa:heyarje/makemkv-beta"
+
+- name: install makemkv
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+  - makemkv-oss
+  - makemkv-bin
+
