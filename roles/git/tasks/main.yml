@@ -22,3 +22,8 @@
   template:
     src: "templates/gitignore_global.j2"
     dest: "{{ home_dir }}/.gitignore_global"
+
+- name: clone git-secrets from aws github repo
+  git:
+    repo: 'git@github.com:awslabs/git-secrets.git'
+    dest: "{{ home_dir }}/git-secrets"

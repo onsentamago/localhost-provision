@@ -7,6 +7,11 @@
   with_items:
     - npm
 
+- name: Install rlwrap
+  apt:
+    name: rlwrap
+    update_cache: yes
+
 - name: Install n
   npm:
     name: n
