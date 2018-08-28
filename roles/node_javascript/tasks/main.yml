@@ -7,6 +7,11 @@
   with_items:
     - npm
 
+- name: Install rlwrap
+  apt:
+    name: rlwrap
+    update_cache: yes
+
 - name: Install n
   npm:
     name: n
@@ -27,3 +32,13 @@
 
 - name: install angular cli
   command: npm install -g @angular/cli
+
+- name: NativeScript
+  npm:
+    name: nativescript
+    global: yes
+
+- name: Express Generator
+  npm:
+    name: express-generator
+    global: yes
