@@ -32,3 +32,13 @@
 
 - name: install angular cli
   command: npm install -g @angular/cli
+
+- name: NativeScript
+  npm:
+    name: nativescript
+    global: yes
+
+- name: Express Generator
+  npm:
+    name: express-generator
+    global: yes
