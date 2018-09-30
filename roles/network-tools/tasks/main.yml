@@ -1,6 +1,6 @@
 ---
-# tasks file for network-tools
-- name: install speedtest-cli
+# tasks file for network-tools and firewall
+- name: install net work tools
   apt:
     name: "{{ item }}"
     update_cache: yes
@@ -8,3 +8,30 @@
     - speedtest-cli
     - net-tools
     - whois
+    - ufw
+    - gufw
+
+- name: set up ufw
+  ufw:
+    state: enabled
+
+- name: Allow all access to tcp port 4200(ng serve)(only accesible inside home)
+  ufw:
+    rule: allow
+    port: 4200
+    proto: tcp
+    src: 0.0.0.0/0
+
+- name: Allow all access to dropbox(only accesible inside home)
+  ufw:
+    rule: allow
+    port: 17500
+    proto: tcp
+    src: 0.0.0.0/0
+
+- name: Allow all access to dropbox(only accesible inside home)
+  ufw:
+    rule: allow
+    port: 17500
+    proto: udp
+    src: 0.0.0.0/0
