@@ -42,3 +42,8 @@
   npm:
     name: express-generator
     global: yes
+
+- name: install nodeunit(node test runner)
+  npm:
+    name: nodeunit
+    global: yes

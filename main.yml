@@ -15,7 +15,6 @@
       home_dir: "{{ local_home }}"
     - role: node_javascript
     - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
-    - role: firewall
     - role: php
     - role: video-tools
     - role: gimp
