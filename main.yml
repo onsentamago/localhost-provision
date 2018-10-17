@@ -13,15 +13,16 @@
       home_dir: "{{ local_home }}"
     - role: vim
       home_dir: "{{ local_home }}"
-    - role: node_javascript
-    - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
+    - role: build-tools
+    - role: javascript-tools
+    - role: ruby-tools
     - role: php
+    - role: python
+    - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: video-tools
     - role: gimp
     - role: asunder
-    - role: python
     - role: peek # Simple animated GIF screen recorder
-    - role: build-tools
     - role: jhead # Digicam JPEG Exif header manipulation tool
     - role: tools
     - role: mysql

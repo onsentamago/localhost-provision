@@ -1,11 +1,10 @@
 ---
-# tasks file for node_javascript
+# tasks file for javascript-tools
 - name: install node related app
   apt:
-    name: "{{ item }}"
+    name:
+      - napm
     update_cache: yes
-  with_items:
-    - npm
 
 - name: Install rlwrap
   apt:
@@ -25,7 +24,7 @@
     name: typescript
     global: yes
 
-- name: ts-node #Execute TypeScript files with node_javascript
+- name: ts-node #Execute TypeScript files with javascript-tools
   npm:
     name: ts-node
     global: yes
