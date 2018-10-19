@@ -1,0 +1,6 @@
+---
+# tasks file for ruby-tools
+- name: install ruby
+  apt:
+    name: ruby
+    update_cache: yes
