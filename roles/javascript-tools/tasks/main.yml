@@ -3,7 +3,7 @@
 - name: install node related app
   apt:
     name:
-      - napm
+      - npm
     update_cache: yes
 
 - name: Install rlwrap
