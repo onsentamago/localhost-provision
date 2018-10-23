@@ -6,13 +6,12 @@
 
 - name: install php and related tools
   apt:
-    name: "{{ item }}"
+    name:
+      - php7.2-cli
+      - php7.2-curl
+      - php7.2-xml
+      - php-pear
+      - php7.2-zip
+      - php7.2-mysql
+      - composer
     update_cache: yes
-  with_items:
-    - php7.2-cli
-    - php7.2-curl
-    - php7.2-xml
-    - php-pear
-    - php7.2-zip
-    - php7.2-mysql
-    - composer
