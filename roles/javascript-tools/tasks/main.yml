@@ -19,10 +19,9 @@
 - name: Install latest node
   command: n latest
 
-- name: typescript related tools
+- name: typescript
   npm:
-    name:
-      - typescript
+    name: typescript
     global: yes
 
 - name: ts-node #Execute TypeScript files with javascript-tools
