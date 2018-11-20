@@ -50,4 +50,4 @@
 - name: setting up npm config
   template:
     src: "templates/npmrc.j2"
-    dest: "{{ home_dir }}/.gitconfig"
+    dest: "{{ home_dir }}/.npmrc"
