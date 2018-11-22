@@ -6,11 +6,6 @@
       - npm
     update_cache: yes
 
-- name: Install rlwrap
-  apt:
-    name: rlwrap
-    update_cache: yes
-
 - name: Install n
   npm:
     name: n
@@ -46,3 +41,8 @@
   npm:
     name: nodeunit
     global: yes
+
+- name: setting up npm config
+  template:
+    src: "templates/npmrc.j2"
+    dest: "{{ home_dir }}/.npmrc"

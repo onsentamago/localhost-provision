@@ -15,6 +15,10 @@
       home_dir: "{{ local_home }}"
     - role: build-tools
     - role: javascript-tools
+      mailaddress: "{{ mail_address }}"
+      npmname: "{{ npm_name }}"
+      url: "{{ user_url }}"
+      home_dir: "{{ local_home }}"
     - role: ruby-tools
     - role: php
     - role: python
