@@ -14,7 +14,7 @@
     - role: vim
       home_dir: "{{ local_home }}"
     - role: build-tools
-    - role: javascript-tools
+    - role: node
       mailaddress: "{{ mail_address }}"
       npmname: "{{ npm_name }}"
       url: "{{ user_url }}"
