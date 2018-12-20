@@ -6,6 +6,11 @@
       - npm
     update_cache: yes
 
+- name: Install n
+  npm:
+    name: n
+    global: yes
+
 - name: setting up npm config
   template:
     src: "templates/npmrc.j2"
