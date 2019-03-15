@@ -34,6 +34,8 @@
     - role: keepassx
     - role: openjdk
     - role: network-tools
+      tags:
+        - network
     - role: clementine # modern music player and library organizer
     - role: bash
     - role: jd2ch
