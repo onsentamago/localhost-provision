@@ -10,3 +10,4 @@
     - "alias ap='ansible-playbook'"
     - "alias purejpg='jhead -purejpg'"
     - "alias globalip='curl httpbin.org/ip'"
+    - "alias dc='docker-compose'"

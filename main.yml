@@ -20,7 +20,6 @@
       url: "{{ user_url }}"
       home_dir: "{{ local_home }}"
     - role: ruby-tools
-    - role: php
     - role: python
     - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: video-tools
