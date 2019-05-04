@@ -37,7 +37,6 @@
         - network
     - role: clementine # modern music player and library organizer
     - role: bash
-    - role: jd2ch
     - role: ibus-mozc
     - role: theme
     - role: inkscape
