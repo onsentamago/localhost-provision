@@ -35,7 +35,6 @@
     - role: network-tools
       tags:
         - network
-    - role: clementine # modern music player and library organizer
     - role: bash
     - role: ibus-mozc
     - role: theme
