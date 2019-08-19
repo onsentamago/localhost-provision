@@ -6,7 +6,7 @@ Initial setup of Ubuntu18.04 desktop with Ansible.
 
 ## Installing Ansible
 
-```soncole
+```shell
 sudo apt update
 sudo apt dist-upgrade -y
 sudo apt-add-repository ppa:ansible/ansible
@@ -16,7 +16,7 @@ sudo apt install ansible -y
 
 ## Usage
 
-```console
+```shell
 ansible-playbook main.yml
 ```
 
