@@ -21,7 +21,9 @@ ansible-playbook main.yml
 ```
 
 ## Manually installed packages
+- apt
+  - google-cloud-sdk
 - linuxbrew
   - doctl
-- snap
-  - kubectl
+- curl or other tools
+  - nvm(node version manager)
