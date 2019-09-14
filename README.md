@@ -25,5 +25,7 @@ ansible-playbook main.yml
   - google-cloud-sdk
 - linuxbrew
   - doctl
+- snap
+  - `sudo snap install kubectl --classic`
 - curl or other tools
   - nvm(node version manager)
