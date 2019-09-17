@@ -29,3 +29,8 @@ ansible-playbook main.yml
   - `sudo snap install kubectl --classic`
 - curl or other tools
   - nvm(node version manager)
+
+## Manually configure settings
+- inotify
+  - `sudo sysctl fs.inotify.max_user_watches=524288`
+  - `sudo sysctl -p --system`
