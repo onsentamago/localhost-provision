@@ -32,5 +32,4 @@ ansible-playbook main.yml
 
 ## Manually configure settings
 - inotify
-  - `sudo sysctl fs.inotify.max_user_watches=524288`
-  - `sudo sysctl -p --system`
+  - `echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system`
