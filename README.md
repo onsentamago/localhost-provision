@@ -21,7 +21,15 @@ ansible-playbook main.yml
 ```
 
 ## Manually installed packages
+- apt
+  - google-cloud-sdk
 - linuxbrew
   - doctl
 - snap
-  - kubectl
+  - `sudo snap install kubectl --classic`
+- curl or other tools
+  - nvm(node version manager)
+
+## Manually configure settings
+- inotify
+  - `echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system`

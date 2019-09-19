@@ -3,6 +3,11 @@
 - name: add git repository
   apt_repository:
     repo: "ppa:git-core/ppa"
+
+- name: add meld repository
+  apt_repository:
+    repo: "ppa:sicklylife/ppa"
+
 - name: install git and other tools
   apt:
     name: "{{ item }}"
