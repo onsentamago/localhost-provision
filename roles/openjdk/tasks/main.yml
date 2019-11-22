@@ -4,3 +4,8 @@
   apt:
     name: default-jdk
     update_cache: yes
+
+- name: install openjdk8
+  apt:
+    name: openjdk-8-jdk
+    update_cache: yes
