@@ -27,6 +27,8 @@ ansible-playbook main.yml
   - doctl
 - snap
   - `sudo snap install kubectl --classic`
+  - `sudo snap install helm --classic`
+  - `sudo snap install android-studio --classic`
 - curl or other tools
   - nvm(node version manager)
 
