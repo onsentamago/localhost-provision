@@ -9,8 +9,5 @@
 
 - name: install theme
   apt:
-    name: "{{ item }}"
+    name: ['papirus-icon-theme','materia-gtk-theme']
     update_cache: yes
-  with_items:
-  - papirus-icon-theme
-  - materia-gtk-theme

@@ -1,5 +1,5 @@
 ---
-- name: configure my personal computer
+- name: Configure my laptop
   hosts: localhost
   become: yes
   vars:
@@ -14,13 +14,6 @@
     - role: vim
       home_dir: "{{ local_home }}"
     - role: build-tools
-    - role: node
-      mailaddress: "{{ mail_address }}"
-      npmname: "{{ npm_name }}"
-      url: "{{ user_url }}"
-      home_dir: "{{ local_home }}"
-    - role: ruby-tools
-    - role: python
     - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
     - role: video-tools
     - role: gimp
@@ -30,7 +23,6 @@
     - role: tools
     - role: mysql
     - role: audacity # cross-platform audio software
-    - role: keepassx
     - role: openjdk
     - role: network-tools
       tags:
@@ -39,3 +31,4 @@
     - role: ibus-mozc
     - role: theme
     - role: inkscape
+    - role: dev-tools

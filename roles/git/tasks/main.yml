@@ -10,13 +10,8 @@
 
 - name: install git and other tools
   apt:
-    name: "{{ item }}"
+    name: ['git','git-gui','meld','git-flow']
     update_cache: yes
-  with_items:
-    - git
-    - git-gui
-    - meld
-    - git-flow
 
 - name: setting up git config
   template:

@@ -2,10 +2,8 @@
 # tasks file for vim
 - name: install vim
   apt:
-    name: "{{ item }}"
+    name: ['vim']
     update_cache: yes
-  with_items:
-    - vim
 
 - name: setting up vim config
   template:

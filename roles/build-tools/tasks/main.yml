@@ -2,8 +2,5 @@
 # tasks file for gimp
 - name: install build-tools
   apt:
-    name: "{{ item }}"
+    name: ['autoconf','build-essential']
     update_cache: yes
-  with_items:
-    - autoconf
-    - build-essential
