@@ -25,6 +25,7 @@ ansible-playbook main.yml
   - google-cloud-sdk
 - linuxbrew
   - doctl
+  - youtube-dl
 - snap
   - `sudo snap install kubectl --classic`
   - `sudo snap install helm --classic`

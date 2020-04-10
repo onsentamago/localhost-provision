@@ -2,12 +2,8 @@
 # tasks file for clamav
 - name: install clamav
   apt:
-    name: "{{ item }}"
+    name: ['clamav-base','clamav-daemon','clamav-freshclam']
     update_cache: yes
-  with_items:
-    - clamav-base
-    - clamav-daemon
-    - clamav-freshclam
 
 - name: update clamav definition
   shell: "{{ item }}"

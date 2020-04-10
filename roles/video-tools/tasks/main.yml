@@ -6,16 +6,7 @@
 
 - name: install SMPlayer
   apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - smplayer
-    - smplayer-themes
-    - smplayer-skins
-
-- name: install youtube-dl
-  apt:
-    name: youtube-dl
+    name: ['smplayer','smplayer-themes','smplayer-skins']
     update_cache: yes
 
 - name: install devede
@@ -34,9 +25,6 @@
 
 - name: install makemkv
   apt:
-    name: "{{ item }}"
+    name: ['makemkv-oss','makemkv-bin']
     update_cache: yes
-  with_items:
-  - makemkv-oss
-  - makemkv-bin
 

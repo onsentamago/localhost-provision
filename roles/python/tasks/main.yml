@@ -1,8 +1,0 @@
----
-# tasks file for python
-- name: install python and other related tools
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - python-pip

@@ -2,8 +2,6 @@
 # tasks file for jhead
 - name: install jhead
   apt:
-    name: "{{ item }}"
+    name: ['jhead']
     update_cache: yes
-  with_items:
-    - jhead
 
