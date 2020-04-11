@@ -21,8 +21,6 @@ ansible-playbook main.yml
 ```
 
 ## Manually installed packages
-- apt
-  - google-cloud-sdk
 - linuxbrew
   - doctl
   - youtube-dl

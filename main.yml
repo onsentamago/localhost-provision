@@ -1,6 +1,6 @@
 ---
 - name: Configure my laptop
-  hosts: localhost
+  hosts: all
   become: yes
   vars:
     local_home: "{{ lookup('env','HOME') }}"
