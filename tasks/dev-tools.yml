@@ -1,0 +1,21 @@
+---
+# tasks file for roles/dev-tools
+- name: add google-cloud-sdk repository
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
+    state: present
+    filename: google-cloud-sdk
+  tags: google-cloud-sdk
+
+- name: add apt key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    keyring: /usr/share/keyrings/cloud.google.gpg
+  tags: google-cloud-sdk
+
+- name: install google-clooud-sdk
+  apt:
+    name: google-cloud-sdk
+    update_cache: yes
+  when: not ansible_check_mode
+  tags: google-cloud-sdk

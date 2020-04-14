@@ -4,31 +4,23 @@
   become: yes
   vars:
     local_home: "{{ lookup('env','HOME') }}"
-  vars_files:
-    - conf.yml.example
-  roles:
-    - role: git
-      mailaddress: "{{ mail_address }}"
-      gitname: "{{ git_name }}"
-      home_dir: "{{ local_home }}"
-    - role: vim
-      home_dir: "{{ local_home }}"
-    - role: build-tools
-    - role: clamav # open source antivirus engine for detecting trojans, viruses, malware & other malicious threats
-    - role: video-tools
-    - role: gimp
-    - role: asunder
-    - role: peek # Simple animated GIF screen recorder
-    - role: jhead # Digicam JPEG Exif header manipulation tool
-    - role: tools
-    - role: mysql
-    - role: audacity # cross-platform audio software
-    - role: openjdk
-    - role: network-tools
-      tags:
-        - network
-    - role: bash
-    - role: ibus-mozc
-    - role: theme
-    - role: inkscape
-    - role: dev-tools
+  tasks:
+    - import_tasks: tasks/asunder.yml
+    - import_tasks: tasks/audacity.yml
+    - import_tasks: tasks/bash.yml
+    - import_tasks: tasks/build-tools.yml
+    - import_tasks: tasks/clamav.yml
+    - import_tasks: tasks/dev-tools.yml
+    - import_tasks: tasks/gimp.yml
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/ibus.yml
+    - import_tasks: tasks/inkscape.yml
+    - import_tasks: tasks/jhead.yml
+    - import_tasks: tasks/mysql.yml
+    - import_tasks: tasks/network-tools.yml
+    - import_tasks: tasks/open-jdk.yml
+    - import_tasks: tasks/peek.yml
+    - import_tasks: tasks/theme.yml
+    - import_tasks: tasks/tools.yml
+    - import_tasks: tasks/video.yml
+    - import_tasks: tasks/vim.yml

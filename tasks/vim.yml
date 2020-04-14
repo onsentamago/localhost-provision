@@ -1,0 +1,13 @@
+---
+# tasks file for vim
+- name: install vim
+  apt:
+    name: 'vim'
+    update_cache: yes
+  tags: vim
+
+- name: setting up vim config
+  template:
+    src: "../templates/vimrc.j2"
+    dest: "{{ local_home }}/.vimrc"
+  tags: vim
