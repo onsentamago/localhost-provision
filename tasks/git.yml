@@ -46,7 +46,7 @@
     value: only
   tags: git
 
-- name: put gitignore file
+- name: place gitignore file
   template:
     src: "../templates/.gitignore.j2"
     dest: "{{ local_home }}/.gitignore"
