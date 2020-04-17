@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ansible:
+    build: .
+    volumes:
+    - .:/ansible
+    working_dir: /ansible
+    stdin_open: true
+    tty: true
