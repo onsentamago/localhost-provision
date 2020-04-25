@@ -4,15 +4,19 @@
   become: yes
   vars:
     local_home: "{{ lookup('env','HOME') }}"
+  vars_files:
+    - ./external_vars.yml
   tasks:
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/build-tools.yml
+    - import_tasks: tasks/brew.yml
     - import_tasks: tasks/asunder.yml
     - import_tasks: tasks/audacity.yml
     - import_tasks: tasks/bash.yml
-    - import_tasks: tasks/build-tools.yml
+    - import_tasks: tasks/chrome.yml
     - import_tasks: tasks/clamav.yml
     - import_tasks: tasks/dev-tools.yml
     - import_tasks: tasks/gimp.yml
-    - import_tasks: tasks/git.yml
     - import_tasks: tasks/ibus.yml
     - import_tasks: tasks/inkscape.yml
     - import_tasks: tasks/jhead.yml

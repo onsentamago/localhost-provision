@@ -1,0 +1,20 @@
+FROM ubuntu:focal
+
+RUN apt-get update \
+&& apt-get dist-upgrade -y \
+&& apt-get install -y software-properties-common
+
+RUN apt-get update && apt-get install -y \
+  ansible \
+  curl \
+  sudo
+
+RUN adduser --disabled-password --gecos '' hogeuser
+RUN adduser hogeuser sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER hogeuser
+
+ENV ANSIBLE_FORCE_COLOR=1
+
+CMD ["/bin/bash"]

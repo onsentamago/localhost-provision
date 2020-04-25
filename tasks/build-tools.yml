@@ -4,3 +4,4 @@
   apt:
     name: ['autoconf','build-essential']
     update_cache: yes
+  tags: build

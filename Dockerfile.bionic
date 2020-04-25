@@ -7,7 +7,14 @@ RUN apt-get update \
 RUN apt-add-repository -y ppa:ansible/ansible \
 && apt-get update && apt-get install -y \
   ansible \
-  curl
+  curl \
+  sudo
+
+RUN adduser --disabled-password --gecos '' hogeuser
+RUN adduser hogeuser sudo
+RUN echo 'hogeuser ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+USER hogeuser
 
 ENV ANSIBLE_FORCE_COLOR=1
 

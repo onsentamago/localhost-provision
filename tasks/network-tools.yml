@@ -10,19 +10,6 @@
     state: enabled
   tags: network
 
-- name: Allow access to some TCP ports (for development)
-  ufw:
-    rule: allow
-    to_port: "{{ item }}"
-    proto: tcp
-    src: 0.0.0.0/0
-  with_items:
-    - 4200
-    - 4201
-    - 8080
-    - 8081
-  tags: network
-
 - name: Allow all access to dropbox(only accesible inside home)
   ufw:
     rule: allow

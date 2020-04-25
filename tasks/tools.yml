@@ -6,5 +6,5 @@
 
 - name: install tools
   apt:
-    name: ['dconf-editor','gnome-tweaks','htop','ukuu','gnome-shell-pomodoro','clipit','linuxbrew-wrapper']
+    name: ['dconf-editor','gnome-tweaks','htop','ukuu','gnome-shell-pomodoro','clipit']
     update_cache: yes
