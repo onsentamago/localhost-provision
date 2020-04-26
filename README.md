@@ -17,7 +17,7 @@ sudo apt install ansible -y
 ## Usage
 
 ```shell
-ansible-playbook main.yml -i hosts
+ansible-playbook main.yml -i hosts --ask-vault-pass
 ```
 
 ## Manually configure settings
