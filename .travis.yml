@@ -16,6 +16,7 @@ before_install:
 
 script:
   - echo "$VAULT_PASSWORD" >> vault_pass.txt
+  - echo vault_pass.txt
   - container_id=$(mktemp)
   - 'sudo docker run -itd --privileged --volume="${PWD}":/ansible ${distribution}-${version}:ansible > "${container_id}"'
   - 'sudo docker exec "$(cat ${container_id})" ansible-playbook --verbose --syntax-check /ansible/main.yml -i /ansible/hosts --vault-password-file /ansible/vault_pass.txt'
