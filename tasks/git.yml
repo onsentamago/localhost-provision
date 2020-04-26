@@ -1,5 +1,4 @@
 ---
-# tasks file for git
 - name: add git repository
   apt_repository:
     repo: "ppa:git-core/ppa"
@@ -8,6 +7,7 @@
 - name: add meld repository
   apt_repository:
     repo: "ppa:sicklylife/ppa"
+  when: ansible_distribution_release == 'bionic'
   tags: git
 
 - name: install git and other tools

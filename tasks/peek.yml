@@ -1,9 +1,5 @@
 ---
-# tasks file for git
-- name: add repository
-  apt_repository:
-    repo: "ppa:peek-developers/stable"
 - name: install peek
-  apt:
+  snap:
     name: peek
-    update_cache: yes
+  tags: snap
