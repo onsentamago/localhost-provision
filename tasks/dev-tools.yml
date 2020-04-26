@@ -21,4 +21,5 @@
     name: ['doctl','nvm']
   environment:
     PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
+  become: no
   tags: brew-dev
