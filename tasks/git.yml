@@ -1,0 +1,71 @@
+---
+# tasks file for git
+- name: add git repository
+  apt_repository:
+    repo: "ppa:git-core/ppa"
+  tags: git
+
+- name: add meld repository
+  apt_repository:
+    repo: "ppa:sicklylife/ppa"
+  tags: git
+
+- name: install git and other tools
+  apt:
+    name: ['git','git-gui','meld','git-flow']
+    update_cache: yes
+  tags: git
+
+- git_config:
+    name: user.name
+    scope: global
+    value: "{{ git_user_name }}"
+  tags: git
+
+- git_config:
+    name: user.email
+    scope: global
+    value: "{{ git_mail_address }}"
+  tags: git
+
+- git_config:
+    name: diff.tool
+    scope: global
+    value: meld
+  tags: git
+
+- git_config:
+    name: merge.tool
+    scope: global
+    value: meld
+  tags: git
+
+- git_config:
+    name: alias.lol
+    scope: global
+    value: log --graph --decorate --pretty=oneline --all --abbrev-commit
+  tags: git
+
+- git_config:
+    name: push.default
+    scope: global
+    value: simple
+  tags: git
+
+- git_config:
+    name: pull.ff
+    scope: global
+    value: only
+  tags: git
+
+- name: place gitignore file
+  template:
+    src: "../templates/.gitignore.j2"
+    dest: "{{ local_home }}/.gitignore"
+  tags: git
+
+- git_config:
+    name: core.excludesfile
+    scope: global
+    value: "{{ local_home }}/.gitignore"
+  tags: git

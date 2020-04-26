@@ -1,0 +1,23 @@
+---
+# tasks file for network-tools and firewall
+- name: install net work tools
+  apt:
+    name: ['speedtest-cli','net-tools','whois','ufw','gufw']
+    update_cache: yes
+
+- name: set up ufw
+  ufw:
+    state: enabled
+  tags: network
+
+- name: Allow all access to dropbox(only accesible inside home)
+  ufw:
+    rule: allow
+    port: 17500
+    proto: "{{ item }}"
+    src: 0.0.0.0/0
+  with_items:
+    - tcp
+    - udp
+  tags: network
+

@@ -1,0 +1,24 @@
+---
+- name: install dev tools from snap with classic
+  snap:
+    name:
+      - kubectl
+      - helm
+      - android-studio
+      - google-cloud-sdk
+    classic: true
+  tags: snap
+
+- name: install dev tools from snap with beta
+  snap:
+    name:
+      - mysql-workbench-community
+    channel: beta
+  tags: snap
+
+- name: install packages from brew
+  homebrew:
+    name: ['doctl','nvm']
+  environment:
+    PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
+  tags: brew-dev

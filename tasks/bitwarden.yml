@@ -1,0 +1,7 @@
+---
+- name: install bitwarden
+  snap:
+    name:
+      - bitwarden
+  tags: snap
+

@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/onsentamago/localhost-provision.svg?branch=master)](https://travis-ci.org/onsentamago/localhost-provision)
 
-# localhost-provisioning
+# Local Host Provisioning with Ansible
 
-Initial setup of Ubuntu18.04 desktop with Ansible.
+Setup of Ubuntu18.04 desktop with Ansible.
 
 ## Installing Ansible
 
@@ -17,21 +17,8 @@ sudo apt install ansible -y
 ## Usage
 
 ```shell
-ansible-playbook main.yml
+ansible-playbook main.yml -i hosts
 ```
-
-## Manually installed packages
-- apt
-  - google-cloud-sdk
-- linuxbrew
-  - doctl
-  - youtube-dl
-- snap
-  - `sudo snap install kubectl --classic`
-  - `sudo snap install helm --classic`
-  - `sudo snap install android-studio --classic`
-- curl or other tools
-  - nvm(node version manager)
 
 ## Manually configure settings
 - inotify
