@@ -3,12 +3,14 @@
   git:
     repo: https://github.com/Homebrew/brew
     dest: "{{ local_home }}/.linuxbrew/Homebrew"
+  become: no
   tags: brew
 
 - name: mkdir linuxbrew
   file:
     path: "{{ local_home }}/.linuxbrew/bin"
     state: directory
+  become: no
   tags: brew
 
 - name: link linuxbrew symlink
@@ -16,6 +18,7 @@
     state: link
     src: "{{ local_home }}/.linuxbrew/Homebrew/bin/brew"
     dest: "{{ local_home }}/.linuxbrew/bin/brew"
+  become: no
   tags: brew
 
 - name: add brew to PATH
@@ -25,5 +28,6 @@
     block: |
       export PATH="$HOME/.linuxbrew/bin:$PATH"
       export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+  become: no
   tags: brew
 
