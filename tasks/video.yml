@@ -23,16 +23,12 @@
     update_cache: yes
   tags: video
 
-- name: add makemkv repository
-  apt_repository:
-    repo: "ppa:heyarje/makemkv-beta"
-  tags: video
-
 - name: install makemkv
-  apt:
-    name: ['makemkv-oss','makemkv-bin']
-    update_cache: yes
-  tags: video
+  snap:
+    name: makemkv
+  tags:
+    - video
+    - snap
 
 - name: Install youtube-dl
   homebrew:
