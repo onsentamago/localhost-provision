@@ -1,0 +1,14 @@
+---
+- name: install image manupilating packages
+  snap:
+    name: ['gimp','inkscape']
+  tags:
+    - snap
+    - image-tools
+
+- name: install jhead
+  apt:
+    name: ['jhead']
+    update_cache: yes
+  tags:
+    - image-tools

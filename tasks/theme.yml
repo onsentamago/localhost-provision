@@ -4,10 +4,12 @@
   apt_repository:
     repo: "{{ item }}"
   with_items:
-  - ppa:papirus/papirus
-  - ppa:dyatlov-igor/materia-theme
+    - ppa:papirus/papirus
+    - ppa:dyatlov-igor/materia-theme
+  when: ansible_distribution_release == 'bionic'
 
 - name: install theme
   apt:
     name: ['papirus-icon-theme','materia-gtk-theme']
     update_cache: yes
+  when: ansible_distribution_release == 'bionic'

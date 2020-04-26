@@ -1,9 +1,0 @@
----
-# tasks file for inkscape
-- name: add Inkscape
-  apt_repository:
-    repo: "ppa:inkscape.dev/stable"
-- name: install inkscape
-  apt:
-    name: inkscape
-    update_cache: yes

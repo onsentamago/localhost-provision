@@ -3,28 +3,40 @@
 - name: add smplayer repo
   apt_repository:
     repo: "ppa:rvm/smplayer"
+  tags: video
 
 - name: install SMPlayer
   apt:
     name: ['smplayer','smplayer-themes','smplayer-skins']
     update_cache: yes
+  tags: video
 
 - name: install devede
   apt:
     name: devede
     update_cache: yes
+  tags: video
 
 - name: install ffmpeg
   apt:
     name: ffmpeg
     update_cache: yes
+  tags: video
 
 - name: add makemkv repository
   apt_repository:
     repo: "ppa:heyarje/makemkv-beta"
+  tags: video
 
 - name: install makemkv
   apt:
     name: ['makemkv-oss','makemkv-bin']
     update_cache: yes
+  tags: video
 
+- name: Install youtube-dl
+  homebrew:
+    name: youtube-dl
+  environment:
+    PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
+  tags: video

@@ -1,10 +1,17 @@
 ---
 # tasks file for tools
-- name: add apt repos
+- name: add apt repos(tools)
   apt_repository:
     repo: 'ppa:teejee2008/ppa' # for ukuu
+  when: ansible_distribution_release == 'bionic'
 
 - name: install tools
   apt:
-    name: ['dconf-editor','gnome-tweaks','htop','ukuu','gnome-shell-pomodoro','clipit']
+    name: ['ukuu']
+    update_cache: yes
+  when: ansible_distribution_release == 'bionic'
+
+- name: install tools
+  apt:
+    name: ['dconf-editor','gnome-tweaks','htop','clipit']
     update_cache: yes
