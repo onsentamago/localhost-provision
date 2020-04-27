@@ -4,3 +4,4 @@
   apt:
     name: ibus-mozc
     update_cache: yes
+  tags: ibus-mozc
