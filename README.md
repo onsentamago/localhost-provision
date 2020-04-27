@@ -9,6 +9,8 @@ Setup of Ubuntu20.04 desktop with Ansible.
 ### set default editor vim
 
 ```shell script
+sudo apt update
+sudo apt install vim -y
 sudo update-alternatives --config editor
 ```
 
