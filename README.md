@@ -38,9 +38,19 @@ sudo apt install git -y
 sudo apt update
 sudo apt install ansible -y
 ```
+
+## Download playbook
+
+```shell script
+mkdir dev
+cd dev
+git clone git@github.com:onsentamago/localhost-provision.git
+```
+
 ## Install packages
 
-```shell_script
+```shell script
+cd localhost-provision
 ansible-playbook main.yml -i hosts --ask-vault-pass
 ```
 
