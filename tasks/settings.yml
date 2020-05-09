@@ -1,0 +1,11 @@
+---
+- name: Change inotify.max_user_watches so that Intellij IDEA can be happy
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: 524288
+    sysctl_set: yes
+    state: present
+    reload: yes
+    sysctl_file: /etc/sysctl.conf
+  tags:
+    - settings

@@ -27,3 +27,4 @@
     - import_tasks: tasks/tools.yml
     - import_tasks: tasks/video.yml
     - import_tasks: tasks/vim.yml
+    - import_tasks: tasks/settings.yml
