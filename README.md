@@ -54,3 +54,7 @@ cd localhost-provision
 ansible-playbook main.yml -i hosts --ask-vault-pass
 ```
 
+## Manual config
+- change keymap
+- change DPI
+- change CAPS to Ctl
