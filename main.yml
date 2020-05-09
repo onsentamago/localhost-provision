@@ -22,6 +22,7 @@
     - import_tasks: tasks/network-tools.yml
     - import_tasks: tasks/open-jdk.yml
     - import_tasks: tasks/peek.yml
+    - import_tasks: tasks/python.yml
     - import_tasks: tasks/theme.yml
     - import_tasks: tasks/tools.yml
     - import_tasks: tasks/video.yml

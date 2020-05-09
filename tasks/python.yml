@@ -1,0 +1,25 @@
+---
+- name: install pip3
+  apt:
+    name: python3-pip
+    update_cache: yes
+  tags:
+    - python
+
+- name: Install pip packages
+  pip:
+    name:
+      - jupyter
+    executable: pip3
+  tags:
+    - python
+
+- name: add pip to PATH
+  blockinfile:
+    path: "{{ local_home }}/.bashrc"
+    create: false
+    block: |
+      export PATH="$HOME/.local/bin:$PATH"
+  become: no
+  tags:
+    - python

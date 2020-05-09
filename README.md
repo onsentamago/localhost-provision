@@ -54,9 +54,6 @@ cd localhost-provision
 ansible-playbook main.yml -i hosts --ask-vault-pass
 ```
 
-## Manually install packages
-- anaconda
-
 ## Manually configure settings
 - inotify
   - `echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system`
