@@ -19,52 +19,61 @@
     name: user.name
     scope: global
     value: "{{ git_user_name }}"
+  become: no
   tags: git
 
 - git_config:
     name: user.email
     scope: global
     value: "{{ git_mail_address }}"
+  become: no
   tags: git
 
 - git_config:
     name: diff.tool
     scope: global
     value: meld
+  become: no
   tags: git
 
 - git_config:
     name: merge.tool
     scope: global
     value: meld
+  become: no
   tags: git
 
 - git_config:
     name: alias.lol
     scope: global
     value: log --graph --decorate --pretty=oneline --all --abbrev-commit
+  become: no
   tags: git
 
 - git_config:
     name: push.default
     scope: global
     value: simple
+  become: no
   tags: git
 
 - git_config:
     name: pull.ff
     scope: global
     value: only
+  become: no
   tags: git
 
 - name: place gitignore file
   template:
     src: "../templates/.gitignore.j2"
     dest: "{{ local_home }}/.gitignore"
+  become: no
   tags: git
 
 - git_config:
     name: core.excludesfile
     scope: global
     value: "{{ local_home }}/.gitignore"
+  become: no
   tags: git
