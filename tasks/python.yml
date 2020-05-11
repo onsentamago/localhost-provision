@@ -20,6 +20,7 @@
     create: false
     block: |
       export PATH="$HOME/.local/bin:$PATH"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK(python)"
   become: no
   tags:
     - python
