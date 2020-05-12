@@ -2,6 +2,6 @@
 # tasks file for gimp
 - name: install build-tools
   apt:
-    name: ['autoconf','build-essential','curl']
+    name: ['autoconf','build-essential','curl','dkms']
     update_cache: yes
   tags: build
