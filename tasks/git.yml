@@ -77,3 +77,32 @@
     value: "{{ local_home }}/.gitignore"
   become: no
   tags: git
+
+- name: Install Git Prompt
+  get_url:
+    url: https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+    dest: "{{ local_home }}/git-prompt.sh"
+  become: no
+  tags: git
+
+- name: Install Git Prompt
+  blockinfile:
+    path: "{{ local_home }}/.bashrc"
+    create: false
+    block: |
+      PS1="\[\033[1;32m\]\$(date +%Y/%m/%d_%H:%M:%S)\[\033[0m\] \[\033[33m\]\H:\w\n\[\033[0m\][\u@ \W]\[\033[36m\]\$(__git_ps1)\[\033[00m\]\$ "
+
+      #
+      # git-completion.bash / git-prompt.sh
+      #
+      if [ -f {{ local_home }}/git-prompt.sh ]; then
+          source {{ local_home }}/git-prompt.sh
+      fi
+      GIT_PS1_SHOWDIRTYSTATE=true
+      GIT_PS1_SHOWUNTRACKEDFILES=true
+      GIT_PS1_SHOWSTASHSTATE=true
+      GIT_PS1_SHOWUPSTREAM=auto
+    marker: "# {mark} ANSIBLE MANAGED BLOCK(git prompt)"
+  become: no
+  tags:
+    - git
