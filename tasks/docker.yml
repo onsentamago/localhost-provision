@@ -1,0 +1,21 @@
+---
+- name: install docker.io
+  apt:
+    name: docker.io
+    update_cache: yes
+  tags:
+    - docker
+
+- name: enable docker
+  systemd:
+    name: docker
+    enabled: yes
+  tags:
+    - docker
+
+- name: give user administrative privileges to docker
+  user:
+    name: login_user
+    group: docker
+  tags:
+    - docker

@@ -6,6 +6,18 @@
     local_home: "{{ lookup('env','HOME') }}"
   vars_files:
     - ./external_vars.yml
+  pre_tasks:
+    - name: get the username running the deploy
+      become: false
+      command: whoami
+      register: whoami
+      tags:
+        - always
+    - name: Set a fact with the user name.
+      set_fact:
+        login_user: "{{ whoami.stdout }}"
+      tags:
+        - always
   tasks:
     - import_tasks: tasks/git.yml
     - import_tasks: tasks/build-tools.yml
@@ -17,6 +29,7 @@
     - import_tasks: tasks/chrome.yml
     - import_tasks: tasks/clamav.yml
     - import_tasks: tasks/dev-tools.yml
+    - import_tasks: tasks/docker.yml
     - import_tasks: tasks/image-tools.yml
     - import_tasks: tasks/ibus.yml
     - import_tasks: tasks/network-tools.yml
