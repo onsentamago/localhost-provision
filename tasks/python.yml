@@ -1,7 +1,9 @@
 ---
-- name: install pip3
+- name: install python related packages
   apt:
-    name: python3-pip
+    name:
+      - python3-pip
+      - python3-pygame
     update_cache: yes
   tags:
     - python
