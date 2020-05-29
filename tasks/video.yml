@@ -23,6 +23,12 @@
     update_cache: yes
   tags: video
 
+- name: install AcidRip
+  apt:
+    name: acidrip
+    update_cache: yes
+  tags: video
+
 - name: install makemkv
   snap:
     name: makemkv
