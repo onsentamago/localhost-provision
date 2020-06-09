@@ -3,6 +3,7 @@
   apt:
     name: docker.io
     update_cache: yes
+  when: ansible_distribution_release != 'bionic'
   tags:
     - docker
 
@@ -10,6 +11,7 @@
   systemd:
     name: docker
     enabled: yes
+  when: ansible_distribution_release != 'bionic'
   tags:
     - docker
 
@@ -17,5 +19,6 @@
   user:
     name: login_user
     group: docker
+  when: ansible_distribution_release != 'bionic'
   tags:
     - docker
