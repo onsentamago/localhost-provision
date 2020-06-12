@@ -3,9 +3,17 @@
   apt:
     name:
       - python3-pip
-      - python3-pygame
       - python3-venv
     update_cache: yes
+  tags:
+    - python
+
+- name: install python related packages
+  apt:
+    name:
+      - python3-pygame
+    update_cache: yes
+  when: ansible_distribution_release != 'bionic'
   tags:
     - python
 
