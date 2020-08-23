@@ -7,13 +7,13 @@
   vars_files:
     - ./external_vars.yml
   pre_tasks:
-    - name: get the username running the deploy
+    - name: get the running username
       become: false
       command: whoami
       register: whoami
       tags:
         - always
-    - name: Set a fact with the user name.
+    - name: Set a fact with the username
       set_fact:
         login_user: "{{ whoami.stdout }}"
       tags:
@@ -33,6 +33,7 @@
     - import_tasks: tasks/image-tools.yml
     - import_tasks: tasks/ibus.yml
     - import_tasks: tasks/network-tools.yml
+    - import_tasks: tasks/node.yml
     - import_tasks: tasks/open-jdk.yml
     - import_tasks: tasks/peek.yml
     - import_tasks: tasks/python.yml

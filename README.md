@@ -59,6 +59,6 @@ ansible-playbook main.yml -i hosts --ask-vault-pass
 - change DPI
 - change CAPS to Ctl
 
-```shell
+```shell script
 sudo snap connect mysql-workbench-community:password-manager-service
 ```
