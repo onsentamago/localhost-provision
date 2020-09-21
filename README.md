@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/onsentamago/localhost-provision.svg?branch=master)](https://travis-ci.org/onsentamago/localhost-provision)
+[![Build Status](https://travis-ci.com/onsentamago/localhost-provision.svg?branch=master)](https://travis-ci.com/onsentamago/localhost-provision)
 
 # Local Host Provisioning with Ansible
 
