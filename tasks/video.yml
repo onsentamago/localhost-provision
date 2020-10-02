@@ -43,3 +43,14 @@
     PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
   become: no
   tags: video
+
+- name: add HandBrake repository
+  apt_repository:
+    repo: "ppa:stebbins/handbrake-releases"
+  tags: handbrake
+
+- name: install handbrake-gtk
+  apt:
+    name: ['handbrake-gtk']
+    update_cache: yes
+  tags: handbrake
