@@ -1,6 +1,0 @@
----
-# tasks file for asunder
-- name: install asunder
-  apt:
-    name: asunder
-    update_cache: yes

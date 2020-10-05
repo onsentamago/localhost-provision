@@ -1,0 +1,11 @@
+---
+# tasks of music related app
+- name: install asunder
+  apt:
+    name: asunder
+    update_cache: yes
+
+- name: install audacity
+  apt:
+    name: audacity
+    update_cache: yes
