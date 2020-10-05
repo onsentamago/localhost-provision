@@ -11,23 +11,12 @@
     update_cache: yes
   tags: video
 
-- name: install devede
-  apt:
-    name: devede
-    update_cache: yes
-  tags: video
-
-- name: install ffmpeg
-  apt:
-    name: ffmpeg
-    update_cache: yes
-  tags: video
-
-- name: install AcidRip
-  apt:
-    name: acidrip
-    update_cache: yes
-  tags: video
+- name: install vlc
+  snap:
+    name: vlc
+  tags:
+    - video
+    - snap
 
 - name: install makemkv
   snap:
