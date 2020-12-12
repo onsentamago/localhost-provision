@@ -1,5 +1,5 @@
 ---
-- name: install dev tools from snap with classic
+- name: install dev tools from snap classic channel
   snap:
     name:
       - kubectl
@@ -9,7 +9,7 @@
     classic: true
   tags: snap
 
-- name: install dev tools from snap with beta
+- name: install dev tools from snap beta channel
   snap:
     name:
       - mysql-workbench-community
@@ -34,3 +34,7 @@
   tags:
     - nvm
 
+- name: install idle3 (python lerning tool)
+  apt:
+    name: idle3
+    update_cache: yes
