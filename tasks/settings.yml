@@ -5,7 +5,7 @@
     value: '524288'
     sysctl_set: yes
     state: present
-    reload: yes
+    reload: no
     sysctl_file: /etc/sysctl.conf
   tags:
     - settings

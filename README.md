@@ -59,6 +59,12 @@ ansible-playbook main.yml -i hosts --ask-vault-pass
 - change DPI
 - change CAPS to Ctl
 
-```shell script
+```shell
 sudo snap connect mysql-workbench-community:password-manager-service
+```
+
+## How to test
+```shell
+docker-compose up
+docker-compose exec focal ansible-playbook main.yml --skip-tags network,snap -i hosts --ask-vault-pass
 ```
