@@ -31,7 +31,9 @@
   environment:
     PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
   become: no
-  tags: video
+  tags:
+    - video
+    - youtube
 
 - name: add HandBrake repository
   apt_repository:
