@@ -17,7 +17,7 @@
 
 - name: give user administrative privileges to docker
   user:
-    name: login_user
+    name: "{{ login_user }}"
     group: docker
   when: ansible_distribution_release != 'bionic'
   tags:
