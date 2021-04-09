@@ -44,7 +44,7 @@ sudo apt install ansible -y
 ```shell script
 mkdir dev
 cd dev
-git clone git@github.com:onsentamago/localhost-provision.git
+git clone https://github.com/onsentamago/localhost-provision.git
 ```
 
 ## Install packages
