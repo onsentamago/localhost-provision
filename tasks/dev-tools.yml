@@ -6,7 +6,6 @@
       - helm
       - android-studio
       - google-cloud-sdk
-      - node
     classic: true
   tags: snap
 
@@ -30,3 +29,34 @@
   apt:
     name: idle3
     update_cache: yes
+
+- name: install node and npm
+  apt:
+    name:
+      - nodejs
+      - npm
+  tags:
+    - node
+
+- name: install n
+  npm:
+    name: n
+    global: yes
+  tags:
+    - node
+
+- name: install stable version node
+  command:
+    cmd: n stable
+  tags:
+    - node
+
+- name: uninstall node and npm
+  apt:
+    name:
+      - nodejs
+      - npm
+    state: absent
+    purge: yes
+  tags:
+    - node
