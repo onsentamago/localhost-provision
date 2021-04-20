@@ -32,6 +32,7 @@
     - import_tasks: tasks/image-tools.yml
     - import_tasks: tasks/ibus.yml
     - import_tasks: tasks/network-tools.yml
+    - import_tasks: tasks/node.yml
     - import_tasks: tasks/open-jdk.yml
     - import_tasks: tasks/peek.yml
     - import_tasks: tasks/theme.yml
