@@ -11,16 +11,12 @@
     update_cache: yes
   tags: video
 
-- name: install vlc
+- name: install video related software via snap
   snap:
-    name: vlc
-  tags:
-    - video
-    - snap
-
-- name: install makemkv
-  snap:
-    name: makemkv
+    name:
+      - vlc
+      - makemkv
+      - losslesscut
   tags:
     - video
     - snap
@@ -45,3 +41,10 @@
     name: ['handbrake-gtk']
     update_cache: yes
   tags: handbrake
+
+- name: install kazam
+  apt:
+    name: kazam
+    update_cache: yes
+  tags:
+    - video
