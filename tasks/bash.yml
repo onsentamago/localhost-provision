@@ -5,7 +5,6 @@
     path: "{{ local_home }}/.bash_aliases"
     create: true
     block: |
-      alias ap='ansible-playbook'
       alias purejpg='jhead -purejpg'
       alias globalip='curl httpbin.org/ip'
       alias dc='docker-compose'

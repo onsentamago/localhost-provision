@@ -18,14 +18,9 @@
 
 - name: install packages from brew
   homebrew:
-    name: ['doctl','hugo']
+    name: ['hugo']
   environment:
     PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
   become: no
   tags:
     - brew
-
-- name: install idle3 (python lerning tool)
-  apt:
-    name: idle3
-    update_cache: yes
