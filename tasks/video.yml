@@ -22,11 +22,10 @@
     - snap
 
 - name: Install youtube-dl
-  homebrew:
+  pip:
     name: youtube-dl
-  environment:
-    PATH: "{{ local_home }}/.linuxbrew/bin:{{ ansible_env.PATH }}"
-  become: no
+    executable: pip3
+    state: forcereinstall
   tags:
     - video
     - youtube
