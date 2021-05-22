@@ -64,6 +64,13 @@
   become: no
   tags: git
 
+- git_config:
+    name: init.defaultBranch
+    scope: global
+    value: main
+  become: no
+  tags: git
+
 - name: place gitignore file
   template:
     src: "../templates/.gitignore.j2"
