@@ -3,8 +3,6 @@ sudo: required
 
 env:
   - distribution: ubuntu
-    version: bionic
-  - distribution: ubuntu
     version: focal
 
 services:
