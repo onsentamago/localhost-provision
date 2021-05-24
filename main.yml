@@ -18,6 +18,12 @@
         login_user: "{{ whoami.stdout }}"
       tags:
         - always
+    - name: Install pip
+      apt:
+        name: pip
+        update_cache: yes
+      tags:
+        - always
   tasks:
     - import_tasks: tasks/git.yml
     - import_tasks: tasks/build-tools.yml
