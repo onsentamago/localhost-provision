@@ -9,3 +9,8 @@
   apt:
     name: audacity
     update_cache: yes
+
+- name: install Rhythmbox
+  apt:
+    name: rhythmbox
+    update_cache: yes
