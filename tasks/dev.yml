@@ -29,6 +29,8 @@
     path: "{{ local_home }}/.ssh"
     state: directory
     mode: '0755'
+  become: no
+  tags: ssh
 
 - name: place SSH config file
   template:
