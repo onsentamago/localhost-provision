@@ -26,13 +26,12 @@
         - always
   tasks:
     - import_tasks: tasks/git.yml
-    - import_tasks: tasks/build-tools.yml
     - import_tasks: tasks/music.yml
     - import_tasks: tasks/bash.yml
     - import_tasks: tasks/bitwarden.yml
     - import_tasks: tasks/chrome.yml
     - import_tasks: tasks/clamav.yml
-    - import_tasks: tasks/dev-tools.yml
+    - import_tasks: tasks/dev.yml
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/image-tools.yml
     - import_tasks: tasks/ibus.yml

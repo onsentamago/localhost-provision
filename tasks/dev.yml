@@ -1,4 +1,10 @@
 ---
+- name: install build-tools
+  apt:
+    name: ['autoconf','build-essential','curl','dkms']
+    update_cache: yes
+  tags: build
+
 - name: install dev tools from snap classic channel
   snap:
     name:
@@ -17,3 +23,11 @@
       - mysql-workbench-community
     channel: beta
   tags: snap
+
+- name: place SSH config file
+  template:
+    src: "../templates/ssh_config.j2"
+    dest: "{{ local_home }}/.ssh/config"
+    mode: 600
+  become: no
+  tags: ssh
