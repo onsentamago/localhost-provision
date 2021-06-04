@@ -28,6 +28,6 @@
   template:
     src: "../templates/ssh_config.j2"
     dest: "{{ local_home }}/.ssh/config"
-    mode: 600
+    mode: 644
   become: no
   tags: ssh
