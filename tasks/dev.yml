@@ -24,6 +24,12 @@
     channel: beta
   tags: snap
 
+- name: Create .ssh directory
+  file:
+    path: "{{ local_home }}/.ssh"
+    state: directory
+    mode: '0755'
+
 - name: place SSH config file
   template:
     src: "../templates/ssh_config.j2"
