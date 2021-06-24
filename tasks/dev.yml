@@ -24,6 +24,11 @@
     channel: beta
   tags: snap
 
+- name: install python IDEL3
+  apt:
+    name: idle3
+    update_cache: yes
+
 - name: Create .ssh directory
   file:
     path: "{{ local_home }}/.ssh"
