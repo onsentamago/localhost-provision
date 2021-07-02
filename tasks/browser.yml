@@ -16,3 +16,9 @@
     update_cache: yes
   tags: chrome
 
+- name: Install Brave
+  snap:
+    name: brave
+  tags:
+    - snap
+

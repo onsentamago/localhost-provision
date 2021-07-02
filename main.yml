@@ -29,7 +29,7 @@
     - import_tasks: tasks/music.yml
     - import_tasks: tasks/bash.yml
     - import_tasks: tasks/bitwarden.yml
-    - import_tasks: tasks/chrome.yml
+    - import_tasks: tasks/browser.yml
     - import_tasks: tasks/dev.yml
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/image-tools.yml
