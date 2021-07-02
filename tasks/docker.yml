@@ -1,15 +1,16 @@
 ---
-- name: install docker.io
-  apt:
-    name: docker.io
-    update_cache: yes
+- name: install docker
+  snap:
+    name: docker
   tags:
     - docker
+    - snap
 
-- name: enable docker
-  systemd:
+- name: add docker group
+  group:
     name: docker
-    enabled: yes
+    system: yes
+    state: present
   tags:
     - docker
 
