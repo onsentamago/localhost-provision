@@ -1,7 +1,7 @@
 ---
 - name: install image manupilating packages
   snap:
-    name: ['gimp','inkscape']
+    name: ['gimp']
   tags:
     - snap
     - image-tools
