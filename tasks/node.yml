@@ -14,9 +14,9 @@
   tags:
     - node
 
-- name: install stable version node
+- name: install lts version node
   command:
-    cmd: n stable
+    cmd: n lts
   tags:
     - node
 
@@ -29,3 +29,11 @@
     purge: yes
   tags:
     - node
+
+- name: install firebase-tools
+  npm:
+    name: firebase-tools
+    global: yes
+  tags:
+    - node
+    - firebase
